@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Admin ve Login sayfalarını Google'dan sakla
+Disallow: /admin
+Disallow: /login
+
+# Sitemap adresini Google'a göster
+Sitemap: https://bitiklabakici.com/sitemap.xml
