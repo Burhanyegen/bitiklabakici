@@ -1,5 +1,4 @@
 {
-  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/((?!api/|sitemap.xml|robots.txt|_next/|static/|.[a-zA-Z0-9]+$).*)",
