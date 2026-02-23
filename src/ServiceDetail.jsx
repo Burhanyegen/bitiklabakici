@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   ArrowLeft, MessageCircle, CheckCircle, ShieldCheck, 
   Clock, Star, ChevronDown, Info, Heart, Award, Users, MapPin, Phone, Sparkles
@@ -198,7 +199,11 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100 font-sans text-slate-900 selection:bg-blue-100">
-      
+      <Helmet>
+        <title>{data.title} | Bi Tıkla Bakıcı</title>
+        <meta name="description" content={`${data.title} hizmetimizle İstanbul genelinde yanınızdayız. ${data.heroDesc}`} />
+        <link rel="canonical" href={`https://www.bitiklabakici.com/hizmet/${serviceId}`} />
+      </Helmet>
       {/* 1. PREMIUM BLOBS */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-blue-200/40 rounded-full blur-[130px] animate-pulse"></div>

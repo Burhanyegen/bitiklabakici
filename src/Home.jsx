@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   MessageCircle, Phone, Baby, Heart, Activity, 
   Palette, Sparkles, Home as HomeIcon, ShieldCheck, 
@@ -63,7 +64,10 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-900 pb-24 md:pb-0 selection:bg-blue-100">
-      
+      <Helmet>
+        <title>Bi Tıkla Bakıcı | İstanbul Profesyonel Bakıcı Hizmetleri</title>
+        <meta name="description" content="Güvenilir bebek bakıcısı, hasta bakıcısı ve ev destek hizmetleri. İstanbul genelinde referanslı personel." />
+      </Helmet>
       {/* 1. KATMANLI ARKA PLAN (Blobs) */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div className="absolute -top-[10%] -right-[10%] w-[50%] h-[50%] bg-blue-100/40 rounded-full blur-[120px]"></div>
