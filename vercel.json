@@ -1,7 +1,8 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!api/|sitemap.xml|robots.txt|_next/|static/|.[a-zA-Z0-9]+$).*)",
       "destination": "/index.html"
     }
   ]
